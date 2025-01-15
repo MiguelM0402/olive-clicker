@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="src/friend.js"></script>
+    <script src="src/building.js"></script>
     <script src="src/main.js"></script>
-    <title>Olive Clicker</title>
+    <title>Click The Olive</title>
 </head>
 <body>
-  <h1>Olive Clicker</h1>
-  <h2>Help Olive save their friends by cloning theirself!</h2>  
-  <h3>Score: <span class="score" id="score">0</span></h3>
-  <button type="button" onclick="scorePlusPlus()">Click Me!</button>
-  <h4>Friends</h4>
-  <button type="button" id="buyPatches" onclick="patches.purchase">Buy Patches</button>
+    <h1>Olive Clicker</h1>
+    <h2>
+        Olive's friends have been KIDNAPPED by an evil cat spirit! You MUST, as in you HAVE TO, clone Olive to buy back their friends!
+        <br><br>
+        you are now REQUIRED to help Them, so do it. DO IT NOW!!!
+        <br>
+
+    </h2>
+    <h3>olives: <span class="score" id="score">0</span></h3>
+
+    <button type="button" onclick="scorePlusPlus()">click to get a olive</button>
+
+    <h4>buy or click until your paws burn off</h4>
+
+    <button type="button" id="buyPatches" onclick="patches.purchase()">
+        Buy Patches
+    </button>
+    <button type="button" id="buyBrownie" onclick="brownie.purchase()">
+        Buy Brownie
+    </button>
+    <button type="button" id="buyCoco" onclick="coco.purchase()">
+        Buy Coco
+    </button>
+    <button type="button" id="buyAngel" onclick="angel.purchase()">
+        Buy Angel
+    </button>
+
 </body>
 </html>
