@@ -1,10 +1,10 @@
 const tickRate = 1000 / 30;
 let score = 0;
 
-let patches = new Building('Patches', 0.1, 15, 'buyPatches'); //patches
-let brownie = new Building('Brownie', 5, 200, 'buyBrownie'); //brownie
-let coco = new Building('Coco', 15, 500, 'buyCoco'); //coco 
-let angel = new Building('Angel', 50, 1000, 'buyAngel'); // angel
+let patches = new Building('Patches', 0.1, 15); //patches
+let brownie = new Building('Brownie', 5, 200); //brownie
+let coco = new Building('Coco', 15, 500); //coco 
+let angel = new Building('Angel', 50, 1000); // angel
 
 function incScore() {
     score += patches.cps;
