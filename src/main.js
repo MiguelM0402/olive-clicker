@@ -1,10 +1,13 @@
 const tickRate = 1000 / 30;
+let clickStrength = 1;
 let score = 0;
 
 let patches = new Building('Patches', 0.1, 15); //patches
 let brownie = new Building('Brownie', 5, 200); //brownie
 let coco = new Building('Coco', 15, 500); //coco 
 let angel = new Building('Angel', 50, 1000); // angel
+
+let patchesKnife1 = new PatchesKnife('Patches Knife I', 100, patches);
 
 function incScore() {
     score += patches.cps;
@@ -14,7 +17,7 @@ function incScore() {
 }
 
 function scorePlusPlus() {
-    score++;
+    score+= clickStrength;
 }
 
 function updateButtons() {
@@ -22,6 +25,7 @@ function updateButtons() {
     brownie.buttonState();
     coco.buttonState();
     angel.buttonState();
+    patchesKnife1.buttonState();
 }
 
 function updatePage() {

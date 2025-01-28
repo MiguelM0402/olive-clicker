@@ -1,11 +1,12 @@
 class Building {
-    constructor(buildingName, baseCps, baseCost, buttonId) {
+    constructor(buildingName, baseCps, baseCost) {
         this.buildingName = buildingName;
         this.baseCps = baseCps / (1000 / tickRate);
         this.baseCost = baseCost;
         this.cost = baseCost;
-        this.buttonId = buttonId;
+        this.buttonId = 'buy' + buildingName.replace(/\s/g, '');
         this.amountOwned = 0;
+        this.doubleUpgrade = 1;
         this.cps = 0;
         this.visible = false;
     }
@@ -13,8 +14,12 @@ class Building {
     purchase() {
         score -= this.cost;
         this.amountOwned++;
-        this.cps = this.baseCps * this.amountOwned;
+        this.applyDoubleUpgrade();
         this.cost = Math.ceil(this.cost * 1.15 ** this.amountOwned);
+    }
+
+    applyDoubleUpgrade() {
+        this.cps = this.baseCps * this.amountOwned * this.doubleUpgrade;
     }
 
     buttonState() {
@@ -39,7 +44,7 @@ class Building {
             ' (Cost: ' +
             Math.ceil(this.cost).toLocaleString() +
             ' Olives) <br> Adds ' +
-            (this.baseCps * (1000 / tickRate)).toLocaleString() +
+            (this.baseCps * this.doubleUpgrade * (1000 / tickRate)).toLocaleString() +
             ' Olives Per Second <br> [Owned: ' +
             this.amountOwned +
             ']';

@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
     <script src="src/building.js"></script>
+    <script src="src/upgrade.js"></script>
+    <script src="src/patchesknife.js"></script>
     <script src="src/main.js"></script>
     <title>Click The Olive</title>
 </head>
+
 <body>
-    <h1>Olive Clicker</h1>
-    <h2>
-        Olive's friends have been KIDNAPPED by an evil cat spirit! You MUST, as in you HAVE TO, clone Olive to buy back their friends!
-        <br><br>
-        you are now REQUIRED to help Them, so do it. DO IT NOW!!!
-        <br>
+    <header>
+        <h1>Olive Clicker</h1>
+        <h2>
+            Olive's friends have been KIDNAPPED by an evil cat spirit! You MUST, as in you HAVE TO, clone Olive to buy
+            back their friends!
+            <br><br>
+            you are now REQUIRED to help Them, so do it. DO IT NOW!!!
+            <br>
 
-    </h2>
-    <h3>olives: <span class="score" id="score">0</span></h3>
+        </h2>
+    </header>
 
-    <button type="button" onclick="scorePlusPlus()">click to get a olive</button>
+    <div class="outer">
+        <div class="click">
+            <h3>olives: <span class="score" id="score">0</span></h3>
 
-    <h4>buy or click until your paws burn off</h4>
+            <button type="button" onclick="scorePlusPlus()">click to get a olive</button>
+        </div>
 
-    <button type="button" id="buyPatches" onclick="patches.purchase()">
-        Buy Patches
-    </button>
-    <button type="button" id="buyBrownie" onclick="brownie.purchase()">
-        Buy Brownie
-    </button>
-    <button type="button" id="buyCoco" onclick="coco.purchase()">
-        Buy Coco
-    </button>
-    <button type="button" id="buyAngel" onclick="angel.purchase()">
-        Buy Angel
-    </button>
+        <div class="store">
+            <div class="friends">
+                <div class="store-title">
+                <h4>buy or click until your paws burn off</h4>
+            </div>
 
+                <button type="button" id="buyPatches" onclick="patches.purchase()">
+                    Buy Patches
+                </button>
+                <button type="button" id="buyBrownie" onclick="brownie.purchase()">
+                    Buy Brownie
+                </button>
+                <button type="button" id="buyCoco" onclick="coco.purchase()">
+                    Buy Coco
+                </button>
+                <button type="button" id="buyAngel" onclick="angel.purchase()">
+                    Buy Angel
+                </button>
+            </div>
 
-    <h4>upgrade your friends!! give them Items!!</h4>
+            <div class="upgrades">
+                <div class="store-title"></div>
 
-    <button type="button" id="buyPatchesKnife" onclick="patchesknife.purchase()">Buy Patches' Knife</button>
-    
+                <h4>upgrade your friends!! give them Items!!</h4>
+            </div>
+
+                <button type="button" id="buyPatchesKnifeI" onclick="patchesKnife1.purchase()">Buy Patches
+                    Knife</button>
+
 </body>
+</div>
+</div>
+</div>
+
 </html>
