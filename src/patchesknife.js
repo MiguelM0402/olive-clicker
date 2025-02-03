@@ -7,7 +7,7 @@ class PatchesKnife extends Upgrade {
     purchase() {
         super.purchase();
         clickStrength++;
-        this.building,doubleUpgrade++;
+        this.building.doubleUpgrade++;
         this.building.applyDoubleUpgrade();
     }
 }

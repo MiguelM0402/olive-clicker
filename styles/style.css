@@ -1,6 +1,16 @@
-body {
-    margin: 0 15% 0 15%;
+@font-face {
+    font-family: baniRegular;
+    src: url(../fonts/Bani-Regular.ttf);
 }
+
+body {
+    background-image: url(../media/imgs/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 15% 0 15%;
+    font-family: baniRegular;
+}
+
 
 header {
     text-align: center;
@@ -52,4 +62,12 @@ padding: 14px 28px;
 font-size: 1.25em;
 cursor: pointer;
 text-align: left;
+}
+
+button > p {
+    text-align: left;
+}
+
+button > img {
+    float: right;
 }
