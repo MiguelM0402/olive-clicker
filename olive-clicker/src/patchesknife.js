@@ -1,6 +1,6 @@
 class PatchesKnife extends Upgrade {
-    constructor(upgradeName, cost, building){
-        super(upgradeName, cost);
+    constructor(upgradeName, cost, building, imgPick){
+        super(upgradeName, cost, imgPick);
         this.building = building;
     }
 
