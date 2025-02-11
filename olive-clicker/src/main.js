@@ -1,6 +1,6 @@
 const tickRate = 1000 / 30;
 let clickStrength = 1;
-let score = 1000000000000000;
+let score = 0;
 
 let patches = new Building('Patches', 5, 25, "../media/imgs/iconPatches.png"); //patches
 let brownie = new Building('Brownie', 150, 200, "../media/imgs/iconBrownie.png"); //brownie
