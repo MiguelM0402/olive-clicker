@@ -1,10 +1,11 @@
 class Upgrade {
-    constructor(upgradeName, cost) {
+    constructor(upgradeName, cost, imgPick) {
         this.upgradeName = upgradeName;
         this.cost = cost;
         this.buttonId = 'buy' + upgradeName.replace(/\s/g, '');
         this.owned = false;
         this.visible = false
+        this.imgPick = imgPick;
     }
 
     purchase() {
@@ -32,6 +33,6 @@ class Upgrade {
             document.getElementById(this.buttonId).disabled = false;
         }
 
-        document.getElementById(this.buttonId).innerHTML = 'Buy ' + this.buildingName + ' (Cost: ' + Math.ceil(this.cost).toLocaleString() + ' Olives)';
+        document.getElementById(this.buttonId).innerHTML =  "<img src='" + this.imgPick + "'>" + "<p>" + 'Buy ' + this.upgradeName + ' (Cost: ' + Math.ceil(this.cost).toLocaleString() + ' Olives)';
     }
 }
